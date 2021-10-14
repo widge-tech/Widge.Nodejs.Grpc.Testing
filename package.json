@@ -1,0 +1,50 @@
+{
+  "name": "widge.nodejs.grpc.testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": "true",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "tsc --build tsconfig.prod.json",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/widge-tech/Widge.Nodejs.Grpc.Testing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/widge-tech/Widge.Nodejs.Grpc.Testing/issues"
+  },
+  "homepage": "https://github.com/widge-tech/Widge.Nodejs.Grpc.Testing#readme",
+  "devDependencies": {
+    "@types/lodash": "^4.14.175",
+    "@types/nodemailer": "^6.4.4",
+    "@types/pug": "^2.0.5",
+    "@typescript-eslint/eslint-plugin": "^4.32.0",
+    "@typescript-eslint/parser": "^4.32.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "typescript": "^4.4.3"
+  },
+  "dependencies": {
+    "@alicloud/pop-core": "^1.7.10",
+    "@grpc/grpc-js": "^1.4.1",
+    "dayjs": "^1.10.7",
+    "lodash": "^4.17.21",
+    "node-fetch": "^3.0.0",
+    "nodemailer": "^6.6.5",
+    "pg": "^8.7.1",
+    "pug": "^3.0.2",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.3.0",
+    "tsyringe": "^4.6.0",
+    "typeorm": "^0.2.37",
+    "yaml": "^1.10.2"
+  }
+}
