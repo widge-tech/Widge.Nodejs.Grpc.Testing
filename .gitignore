@@ -1,5 +1,7 @@
 node_modules/
 dist/
+packages/grpc/*
+!packages/grpc/.gitkeep
 environments/*
 !environments/.gitkeep
 
