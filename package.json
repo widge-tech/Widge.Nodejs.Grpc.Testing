@@ -2,14 +2,16 @@
   "name": "widge.nodejs.grpc.testing",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/main.js",
   "private": "true",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
     "build": "tsc --build tsconfig.prod.json",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
+    "dev": "tsc --build tsconfig.dev.json",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "proto": "npx grpc_tools_node_protoc --proto_path='./protos' --js_out='import_style=commonjs,binary:./packages/grpc' --grpc_out='grpc_js:./packages/grpc' --plugin='protoc-gen-grpc=./node_modules/.bin/grpc_tools_node_protoc_plugin' --plugin=protoc-gen-ts=./node_modules/.bin/protoc-gen-ts --ts_out='./packages/grpc' ./protos/*.proto"
   },
   "repository": {
     "type": "git",
@@ -24,12 +26,15 @@
   "homepage": "https://github.com/widge-tech/Widge.Nodejs.Grpc.Testing#readme",
   "devDependencies": {
     "@types/lodash": "^4.14.175",
+    "@types/node-fetch": "^2.5.12",
     "@types/nodemailer": "^6.4.4",
     "@types/pug": "^2.0.5",
     "@typescript-eslint/eslint-plugin": "^4.32.0",
     "@typescript-eslint/parser": "^4.32.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
+    "grpc-tools": "^1.11.2",
+    "grpc_tools_node_protoc_ts": "^5.3.2",
     "typescript": "^4.4.3"
   },
   "dependencies": {
@@ -37,7 +42,7 @@
     "@grpc/grpc-js": "^1.4.1",
     "dayjs": "^1.10.7",
     "lodash": "^4.17.21",
-    "node-fetch": "^3.0.0",
+    "node-fetch": "^2.6.5",
     "nodemailer": "^6.6.5",
     "pg": "^8.7.1",
     "pug": "^3.0.2",
