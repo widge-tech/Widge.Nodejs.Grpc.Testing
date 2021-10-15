@@ -8,7 +8,7 @@ import messages from "../packages/grpc/greeter_pb";
 
   function sayHello(call: any, callback: any) {
     const reply = new messages.HelloReply();
-    reply.setMessage("Hello " + call.request.getName());
+    reply.setMessage(`Hello ${call.request.getName()}! [from Nodejs]`);
     callback(null, reply);
   }
 
