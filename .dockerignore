@@ -6,6 +6,7 @@
 docs/
 node_modules/
 environments/
+protos/
 src/
 
 .editorconfig

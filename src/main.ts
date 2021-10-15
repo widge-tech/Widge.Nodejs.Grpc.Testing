@@ -4,8 +4,6 @@ import services from "../packages/grpc/greeter_grpc_pb";
 import messages from "../packages/grpc/greeter_pb";
 
 (async () => {
-  console.log("Hello World!");
-
   const server = new Server();
 
   function sayHello(call: any, callback: any) {
