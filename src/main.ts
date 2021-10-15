@@ -16,7 +16,15 @@ import messages from "../packages/grpc/greeter_pb";
     sayHello,
   });
 
-  server.bindAsync("localhost:6000", ServerCredentials.createInsecure(), () => {
-    server.start();
-  });
+  server.bindAsync(
+    "0.0.0.0:6000",
+    ServerCredentials.createInsecure(),
+    (error, port) => {
+      if (error) {
+        throw error;
+      }
+      server.start();
+      console.log(`🚀  Server ready at ${port}`);
+    }
+  );
 })();
