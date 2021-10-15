@@ -11,7 +11,7 @@
     "build": "tsc --build tsconfig.prod.json",
     "dev": "tsc --build tsconfig.dev.json",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
-    "proto": "npx grpc_tools_node_protoc --proto_path='./protos' --js_out='import_style=commonjs,binary:./packages/grpc' --grpc_out='grpc_js:./packages/grpc' --plugin='protoc-gen-grpc=./node_modules/.bin/grpc_tools_node_protoc_plugin' --plugin=protoc-gen-ts=./node_modules/.bin/protoc-gen-ts --ts_out='./packages/grpc' ./protos/*.proto"
+    "proto": "bash ./build.bash"
   },
   "repository": {
     "type": "git",
