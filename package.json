@@ -10,8 +10,7 @@
   "scripts": {
     "build": "tsc --build tsconfig.prod.json",
     "dev": "tsc --build tsconfig.dev.json",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
-    "proto": "bash ./build.bash"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
   },
   "repository": {
     "type": "git",
