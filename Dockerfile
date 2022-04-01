@@ -1,4 +1,4 @@
-FROM node:14.18.1
+FROM node:16.14.0
 ADD . /app
 VOLUME /app/environments
 WORKDIR /app
